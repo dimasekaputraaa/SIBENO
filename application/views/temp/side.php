@@ -52,6 +52,12 @@
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('/Riwayat/') ?>">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Riwayat</span></a>
+            </li>
+
 
             <!-- Nav Item - Tables -->
 
