@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2023 at 11:36 AM
+-- Generation Time: Jul 17, 2023 at 06:15 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -41,8 +41,7 @@ CREATE TABLE `data_titik` (
 --
 
 INSERT INTO `data_titik` (`kode_titik`, `nama_titik`, `link`, `deskripsi`, `foto`, `status`) VALUES
-('A11', 'Bendungan satu', 'https://www.google.com/maps/place/Bendungan/@-4.8467498,122.1561191,10z/data=!4m10!1m2!2m1!1sbendungan+muna!3m6!1s0x2da3b591b7fc97e9:0xe43c4250a85d8b39!8m2!3d-4.8467498!4d122.7164218!15sCg5iZW5kdW5nYW4gbXVuYZIBEnRvdXJpc3RfYXR0cmFjdGlvbuABAA!16s%2Fg%2F11tg', 'Bendungan adalah bangunan yang berupa urugan tanah, urugan batu, beton, dan atau pasangan batu yang dibangun selain untuk menahan dan menampung air, dapat pula dibangun untuk menahan dan menampung limbah tambang (tailing), atau menampung lumpur sehingga terbentuk waduk (Peraturan Pemerintah No. 37 Tahun 2010 tentang Bendungan).', '720476bf-02bd-47ed-a19e-321dca5faee1.jpeg', 'Nonaktif'),
-('B23', 'Dua', 'https://www.google.com/maps/place/Bendungan/@-4.8467498,122.1561191,10z/data=!4m10!1m2!2m1!1sbendungan+muna!3m6!1s0x2da3b591b7fc97e9:0xe43c4250a85d8b39!8m2!3d-4.8467498!4d122.7164218!15sCg5iZW5kdW5nYW4gbXVuYZIBEnRvdXJpc3RfYXR0cmFjdGlvbuABAA!16s%2Fg%2F11tg', 'Bendungan adalah bangunan yang berupa urugan tanah, urugan batu, beton, dan atau pasangan batu yang dibangun selain untuk menahan dan menampung air, dapat pula dibangun untuk menahan dan menampung limbah tambang (tailing), atau menampung lumpur sehingga terbentuk waduk (Peraturan Pemerintah No. 37 Tahun 2010 tentang Bendungan).', 'IMG_20230331_170416.jpg', '');
+('A11', 'Bendungan satu', 'https://www.google.com/maps/place/4%C2%B027\'24.0%22S+122%C2%B017\'52.9%22E/@-4.456669,122.2955955,18z/data=!3m1!4b1!4m7!1m2!2m1!1sbendungan!3m3!8m2!3d-4.456669!4d122.298031?entry=ttu', 'Bendungan adalah bangunan yang berupa urugan tanah, urugan batu, beton, dan atau pasangan batu yang dibangun selain untuk menahan dan menampung air, dapat pula dibangun untuk menahan dan menampung limbah tambang (tailing), atau menampung lumpur sehingga terbentuk waduk (Peraturan Pemerintah No. 37 Tahun 2010 tentang Bendungan).', '6342fb268adea-bendung-katulampa-kota-bogor-jawa-barat_1265_711.jpg', 'Nonaktif');
 
 -- --------------------------------------------------------
 
@@ -52,7 +51,7 @@ INSERT INTO `data_titik` (`kode_titik`, `nama_titik`, `link`, `deskripsi`, `foto
 
 CREATE TABLE `nilai` (
   `id` int(11) NOT NULL,
-  `waktu` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `waktu` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `kode_titik` varchar(255) NOT NULL,
   `debit` int(255) NOT NULL,
   `tinggi` int(255) NOT NULL,
@@ -65,7 +64,7 @@ CREATE TABLE `nilai` (
 --
 
 INSERT INTO `nilai` (`id`, `waktu`, `kode_titik`, `debit`, `tinggi`, `hujan`, `portal`) VALUES
-(3220, '2023-06-23 07:33:20', 'A11', 0, 0, 'tidak_hujan', 'Tertutup');
+(4468, '2023-07-17 12:14:35', 'A11', 0, 2, 'tidak_hujan', 'Tertutup');
 
 -- --------------------------------------------------------
 
@@ -117,7 +116,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3221;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4469;
 
 --
 -- AUTO_INCREMENT for table `user`
